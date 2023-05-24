@@ -1,0 +1,14 @@
+version: '3'
+services:
+  reg_service:
+    container_name: reg_container
+    image: abdelazizgbr/reg_component
+    volumes:
+      - C:\cloud_data:/app/data
+    stdin_open: true
+  stat_service:
+    container_name: stat_container
+    image: abdelazizgbr/stat_component
+    volumes:
+      - C:\cloud_data:/app/data
+    restart: always
