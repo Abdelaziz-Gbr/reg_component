@@ -101,7 +101,6 @@ public class registerComponent {
             System.out.println(eligibleFiles[i].getName());
         }
         String fileName = scanner.nextLine();
-        scanner.nextLine();
         File selectedFile =  new File("/app/data/batch/" + fileName);
         List<Student> students = readStudentsFromFile(selectedFile);
         insertStudentsInfo(students);
