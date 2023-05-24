@@ -98,12 +98,11 @@ public class registerComponent {
         }
         System.out.println("Eligible batch files:");
         for (int i = 0; i < eligibleFiles.length; i++) {
-            System.out.println((i + 1) + ". " + eligibleFiles[i].getName());
+            System.out.println(eligibleFiles[i].getName());
         }
-        System.out.print("Select a file to insert the students' info: ");
-        int fileIndex = scanner.nextInt() - 1;
+        String fileName = scanner.nextLine();
         scanner.nextLine();
-        File selectedFile = eligibleFiles[fileIndex];
+        File selectedFile =  new File("/app/data/batch/" + fileName);
         List<Student> students = readStudentsFromFile(selectedFile);
         insertStudentsInfo(students);
       }
