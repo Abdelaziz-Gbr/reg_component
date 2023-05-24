@@ -1,0 +1,20 @@
+name: stat application
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build & Push Image
+        run: |
+          echo "${{ secrets.DOCKER_PASS }}" | docker login -u "abdelazizgbr" --password-stdin
+          docker image build -t abdelazizgbr/stat_component:latest .
+          docker push abdelazizgbr/stat_component:latest
