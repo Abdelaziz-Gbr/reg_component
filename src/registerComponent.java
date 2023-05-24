@@ -71,8 +71,8 @@ public class registerComponent {
     }
 
     private static void displayMenu() {
-        System.out.println("1- Add student data");
-        System.out.println("2- Add batch students data");
+        System.out.println("1-Add student data");
+        System.out.println("2-Add batch students data");
      }
 
     private static void registerStudent(Scanner scanner) {
