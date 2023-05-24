@@ -16,5 +16,5 @@ jobs:
       - name: Build & Push Image
         run: |
           echo "${{ secrets.DOCKER_PASS }}" | docker login -u "abdelazizgbr" --password-stdin
-          docker image build -t abdelazizgbr/stat_component:latest .
-          docker push abdelazizgbr/stat_component:latest
+          docker image build -t abdelazizgbr/reg_component:latest .
+          docker push abdelazizgbr/reg_component:latest
