@@ -12,8 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/setup-java
-      - name: Build java class
+      - name: Checkout code
+      - uses: actions/checkout@v2
+      - name: Set up Java Environment
+      - uses: actions/setup-python@v2
+        with:
+          java-version: '18'
         run: |
           cd ./src
           javac registerComponent.java
